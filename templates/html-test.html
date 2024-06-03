@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello People!!</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <script type="text/javascript" src="/static/script/script.js">
+
+        </script>
+    </head>
+    <body>
+        <h1>Hello and welcome to your daily home workout session!</h1>
+        <p1>My name is <strong>{{name}}</strong> [your COACH] and today we will discuss today's Abs Workout</p1>
+        <br></br>
+        <p2>The set of workouts which you can do are as follows:</p2>
+        <br></br>
+
+        {% for i in list_name %}
+            {{ i }}</br>
+        {% endfor %}
+
+        <br></br>
+        <p3>Do each one of these exercises as 2 reps of 30 seconds with 30 second interval between the reps</p3>
+        <p4>Follow the given exercises diligently</p4>
+
+        <br></br>
+        <h2>Thank you for your time!</h2>
+    </body>
+</html>

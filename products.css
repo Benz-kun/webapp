@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px calc(100vw - 200px);
+
+    font-family: Helvetica;
+}
+
+.left-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #ffffff;
+
+    background-color: #5443c3;
+    border-radius: 0 40px 40px 0;
+    padding: 10px 50px 10px 50px;
+    height: 100vh;
+
+    & .middle {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+.right-bar {
+    /* background-color: red; */
+    height: 100vh;
+
+    & .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /* background-color: yellow; */
+        height: 80px;
+    }
+
+    & .content {
+        /* background-color: blue; */
+        height: calc(100vh - 80px);
+
+        & .content-top {
+            /* background-color: brown; */
+            height: 30px;
+
+            font-size: 25px;
+            font-weight: bold;
+            color: #5443c3;
+        }
+
+        & .products {
+            display: grid;
+            grid-template-rows: repeat(auto, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+
+            /* background-color: pink; */
+            height: calc(100% - 30px);
+
+            & .product {
+                /* background-color: teal; */
+                /* border: 1px solid #ccc; */
+                box-shadow: 0px 0px 10px 10px #eee;
+                border-radius: 15px;
+
+                & .product-top {
+                    position: relative;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    height: calc(100% - 40px);
+
+                    /* background-color: red; */
+
+                    .image {
+                        /* background-color: yellow; */
+
+                        img {
+                            width: 100px;
+                        }
+                    }
+
+                    .cart-button {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        /* background-color: magenta; */
+
+                        img {
+                            width: 40px;
+                        }
+                    }
+                }
+
+                & .product-bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+
+                    /* background-color: green; */
+                    height: 40px;
+
+                    & .bottom-left {
+                        & .product-name {
+
+                        }
+
+                        & .product-ratings {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
